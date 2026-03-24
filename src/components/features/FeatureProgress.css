@@ -1,0 +1,41 @@
+.feat-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 100%;
+}
+
+.feat-progress__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.feat-progress__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: default;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.feat-progress__line {
+  width: 2px;
+  height: 40px;
+  background: var(--color-purple);
+  transform-origin: top;
+  margin: 2px 0;
+}
+
+@media (max-width: 900px) {
+  .feat-progress {
+    display: none;
+  }
+}

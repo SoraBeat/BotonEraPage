@@ -1,0 +1,21 @@
+.orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  animation: floatOrb linear infinite alternate;
+}
+
+@keyframes floatOrb {
+  0%   { transform: translateY(0px) translateX(0px); }
+  33%  { transform: translateY(-20px) translateX(12px); }
+  66%  { transform: translateY(14px) translateX(-8px); }
+  100% { transform: translateY(-10px) translateX(18px); }
+}

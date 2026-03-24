@@ -1,0 +1,165 @@
+/* ============================================================
+   BOTONERA — Design System
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --color-bg:           #0A0A0F;
+  --color-bg-panel:     #12121A;
+  --color-bg-card:      #1A1A26;
+  --color-border:       rgba(108, 99, 255, 0.15);
+  --color-border-hover: rgba(108, 99, 255, 0.4);
+  --color-purple:       #6C63FF;
+  --color-cyan:         #00D9FF;
+  --color-green:        #00FF88;
+  --color-text:         #E8E8F0;
+  --color-text-muted:   #6B6B8A;
+
+  /* Gradients */
+  --gradient-brand:     linear-gradient(135deg, #6C63FF 0%, #00D9FF 55%, #00FF88 100%);
+  --gradient-card:      linear-gradient(135deg, rgba(108,99,255,0.06) 0%, rgba(0,217,255,0.03) 100%);
+
+  /* Glows */
+  --glow-purple:        0 0 30px rgba(108, 99, 255, 0.45);
+  --glow-purple-sm:     0 0 14px rgba(108, 99, 255, 0.35);
+  --glow-cyan:          0 0 30px rgba(0, 217, 255, 0.45);
+  --glow-green:         0 0 20px rgba(0, 255, 136, 0.4);
+
+  /* Typography */
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   32px;
+  --space-xl:   64px;
+  --space-2xl:  128px;
+
+  /* Radius */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* ---- Reset ------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis takes over */
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ---- Utility classes --------------------------------------- */
+
+.gradient-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(26, 26, 38, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.glow-border {
+  box-shadow: var(--glow-purple-sm);
+}
+
+.section {
+  position: relative;
+  padding: var(--space-2xl) var(--space-xl);
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* ---- Scrollbar -------------------------------------------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 99, 255, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(108, 99, 255, 0.7); }
+
+/* ---- Selection -------------------------------------------- */
+::selection {
+  background: rgba(108, 99, 255, 0.35);
+  color: #fff;
+}
+
+/* ---- Animations ------------------------------------------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-22px); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(18px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 0.85; transform: scale(1.06); }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}

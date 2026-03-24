@@ -1,0 +1,129 @@
+.legal {
+  padding: var(--space-2xl) var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.legal__header {
+  margin-bottom: var(--space-xl);
+}
+
+.legal__header .section-title {
+  margin-top: 8px;
+  color: var(--color-text);
+}
+
+.legal__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin-bottom: var(--space-xl);
+}
+
+.legal__block {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legal__block--nonprofit {
+  border-color: rgba(0, 217, 255, 0.25);
+  background: rgba(0, 217, 255, 0.04);
+}
+
+.legal__block--mit {
+  border-color: rgba(108, 99, 255, 0.25);
+}
+
+.legal__block-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.legal__block-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.legal__block-text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.legal__mit-text {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid rgba(108, 99, 255, 0.4);
+  padding: 14px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.legal__link {
+  color: var(--color-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.legal__link:hover {
+  color: #fff;
+}
+
+/* Footer */
+.legal__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  max-width: 1100px;
+}
+
+.legal__footer-logo {
+  width: 28px;
+  height: 28px;
+  opacity: 0.7;
+}
+
+.legal__footer-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.legal__footer-link {
+  font-size: 0.85rem;
+  color: var(--color-purple);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.legal__footer-link:hover {
+  color: var(--color-cyan);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .legal {
+    padding: var(--space-xl) var(--space-md);
+  }
+  .legal__grid {
+    grid-template-columns: 1fr;
+  }
+  .legal__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

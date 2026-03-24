@@ -1,0 +1,63 @@
+.dl-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 36px 32px;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  min-width: 240px;
+  flex: 1;
+}
+
+.dl-card:hover {
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.2), 0 24px 60px rgba(0,0,0,0.5);
+}
+
+.dl-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--gradient-brand);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.dl-card__icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.dl-card__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.dl-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.dl-card__arrow {
+  font-size: 1.1rem;
+  color: var(--accent, var(--color-purple));
+  font-weight: 700;
+  margin-top: 8px;
+  transition: transform 0.2s ease;
+}
+
+.dl-card:hover .dl-card__arrow {
+  transform: translate(3px, -3px);
+}
